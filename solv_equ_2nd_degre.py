@@ -38,6 +38,7 @@ def open_url():
     webbrowser.open("https://github.com/matteosev/solveur_equation")
 root = Tk()
 root.title("Resolution d'une equation du 1er ou 2nd degre")
+root.resizable(width = "False", height = "False")
 tk_a = StringVar()
 tk_b = StringVar()
 tk_c = StringVar()
