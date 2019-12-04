@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter.messagebox import *
 from math import *
+import webbrowser
 
 def resoudre():
     a = eval(tk_a.get())
@@ -33,6 +34,8 @@ def resoudre():
 def open_help():
     showinfo("Aide","Vous pouvez entrez les coefficients d'un trinome sous sa forme developpee comme ceci 'ax² + bx + c'\nPour utiliser pi tapez 'pi', pour la racine carree d'un nombre 'sqrt(nombre)', sous forme de fraction '1/2' etc... toutes les fonctions du module math sont disponibles.\nL'algorithme utilise repose sur l'etude du signe du discriminant de l'équation.")
 
+def open_url():
+    webbrowser.open("https://github.com/matteosev/solveur_equation")
 root = Tk()
 root.title("Resolution d'une equation du 1er ou 2nd degre")
 tk_a = StringVar()
@@ -45,6 +48,7 @@ tk_facto = StringVar()
 
 menu = Menu(root)
 menu.add_command(label = "Besoin d'aide ?", command = open_help)
+menu.add_command(label = "code source", command = open_url)
 root.config(menu = menu)
 
 # entree des coefficients du trinome
